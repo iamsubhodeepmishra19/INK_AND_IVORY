@@ -1255,6 +1255,10 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
@@ -1301,6 +1305,22 @@
   }
   .text-shadow-\[0_4px_19\.6px_rgba\(255\,255\,255\,0\.62\)\] {
     text-shadow: 0 4px 19.6px var(--tw-text-shadow-color, rgba(255,255,255,0.62));
+  }
+  .group-hover\:translate-x-1\.25 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-translate-x: calc(var(--spacing) * 1.25);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .group-hover\:translate-x-\[5px\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-translate-x: 5px;
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
   }
   .group-hover\:translate-y-\[-50\%\] {
     &:is(:where(.group):hover *) {
