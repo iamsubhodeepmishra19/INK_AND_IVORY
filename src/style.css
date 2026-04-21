@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  .secondary-btn {
+    @apply py-3.25 px-6.75 text-[15px] sm:text-[18px] font-stolzi-regular text-white rounded-[100px] border-2 border-[#FF9191];
+  }
+  .primary-btn {
+    @apply py-3.25 px-6.75 text-[15px] sm:text-[18px] font-stolzi-regular text-white rounded-[100px] border-2;
+  }
+
+  @keyframes search-bounce {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(20deg) scale(1.12);
+    }
+    50% {
+      transform: rotate(-12deg) scale(1.08);
+    }
+    75% {
+      transform: rotate(6deg) scale(1.04);
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+  }
+  @keyframes cart-hover {
+    0% {
+      transform: translateX(0) rotate(0deg) scale(1);
+    }
+    35% {
+      transform: translateX(4px) rotate(3deg) scale(1.05);
+    }
+    65% {
+      transform: translateX(2px) rotate(-2deg) scale(1.03);
+    }
+    100% {
+      transform: translateX(0) rotate(0deg) scale(1);
+    }
+  }
+
+  .ripple-btn {
+    @apply relative overflow-hidden;
+  }
+
+  .ripple-btn span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-effect 600ms linear;
+    background: var(--ripple-color);
+    pointer-events: none;
+  }
+
+  @keyframes ripple-effect {
+    0% {
+      transform: scale(0);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+}
+@utility container {
+  max-width: 1824px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@layer components {
+  #customSlider {
+    /* position: relative; */
+    position: absolute; /*  change from relative */
+    inset: 0;
+    z-index: 1; /* slider base layer */
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+
+    /* prevents flicker */
+    will-change: opacity;
+  }
+
+  .slide.active {
+    opacity: 1;
+  }
+
+  /* .................................... */
+  .circle-card {
+    transform-origin: bottom center;
+  }
+  /* ............................................. */
+  /* black cinematic fade */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    /* z-index: 1; */
+    z-index: 2; /* stays above slides */
+  }
+
+  /* ....................................... */
+
+  #card-slider {
+    width: 100%;
+  }
+
+  #card-slider .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transition: all 0.4s ease; */
+    transform: scale(0.8);
+    opacity: 0.5;
+
+    /* default = slower exit */
+    transition:
+      transform 0.5s ease,
+      opacity 0.4s ease;
+  }
+  #card-slider .splide__slide {
+    margin: 0 !important;
+  }
+
+  /* Active (center) */
+  #card-slider .splide__slide.is-active .card {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  #card-slider .splide__slide.is-visible:not(.is-active) .card {
+    opacity: 0.7;
+  }
+
+  /* ....................................... */
+
+  .icon {
+    transform-origin: center;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+  .accordion-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon.rotate {
+    transform: rotate(180deg);
+  }
+  .slider {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    border-radius: 999px;
+    outline: none;
+    pointer-events: auto;
+    /* 🔥 THIS is the visible track */
+    background: linear-gradient(
+      to right,
+      rgba(255, 167, 14, 0.66) 0%,
+      rgba(255, 167, 14, 0.66) 40%,
+      #ffffff 40%,
+      #ffffff 100%
+    );
+  }
+
+  /* Hide actual native track */
+  .slider::-webkit-slider-runnable-track {
+    background: transparent;
+    height: 3px;
+  }
+
+  .slider::-moz-range-track {
+    background: transparent;
+    height: 3px;
+  }
+
+  /* Thumb */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    margin-top: -6px; /*  aligns thumb vertically */
+
+    box-shadow:
+      0 0 1.35px rgba(255, 255, 255, 1),
+      0 0 2.7px rgba(255, 255, 255, 1),
+      0 0 9.45px rgba(255, 255, 255, 1),
+      0 0 18.9px rgba(255, 255, 255, 1),
+      0 0 32.4px rgba(255, 255, 255, 1),
+      0 0 56.7px rgba(255, 255, 255, 1);
+  }
+
+  .slider::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+  }
+}
+@theme {
+  --font-viaoda-libre: "Viaoda Libre", serif;
+  --font-source-sance3: "Source Sans 3", sans-serif;
+  --font-stolzi-regular: "Stolzi-regular", sans-serif;
+}
+
+@font-face {
+  font-family: Stolzi-regular;
+  src: url("../fonts/Stolzl-Regular.woff2") format("woff2");
+  /* *regular */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

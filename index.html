@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INK & IVORY</title>
+    <!-- !favicon -->
+    <link
+      rel="shortcut icon"
+      href="./favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <!-- !GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- !splide css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <!-- !custom css -->
+    <link rel="stylesheet" href="./output/style.css" />
+    <style>
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <!-- !header section starts here -->
+    <header class="py-5.5 absolute left-0 right-0 z-50">
+      <div class="container">
+        <nav class="flex items-center">
+          <div class="nav-logo">
+            <a class="w-32 sm:w-46.75" href="./index.html">
+              <img
+                class="w-full h-full object-cover"
+                src="./assets_contact_page/nav-logo.png"
+                alt="nav-logo"
+              />
+            </a>
+          </div>
+          <div
+            class="navbar-collapse flex items-center grow flex-col xl:flex-row pt-22.5 xl:pt-0 fixed xl:relative z-99 -right-full xl:right-0 top-0 bottom-0 w-[90%] sm:w-[60%] xl:w-0 bg-[rgba(23,1,1,0.83)] xl:bg-transparent backdrop-blur-[20px] xl:backdrop-blur-none transition-all duration-500 ease-linear xl:transition-none"
+          >
+            <ul
+              class="flex items-center mx-auto xl:ms-auto xl:me-0 flex-col xl:flex-row"
+            >
+              <li class="nav-items me-0 xl:me-12.5 mb-2.5 xl:mb-0">
+                <a
+                  href="./index.html"
+                  class="links capitalize text-[13px] sm:text-base text-white font-stolzi-regular rounded-[26px] border border-white py-2.25 pe-4.5 ps-10 shadow-[0_0_10px_0_rgba(65,127,255,0.47)] relative after:content-[''] after:h-2.75 after:w-3 after:bg-white after:absolute after:rounded-[100px] after:left-4.5 after:-translate-y-1/2 after:top-1/2 after:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] after:blur-xs"
+                  >home</a
+                >
+              </li>
+
+              <li class="nav-items me-0 xl:me-12.5 mb-2.5 xl:mb-0">
+                <a
+                  href="./about.html"
+                  class="links capitalize text-[13px] sm:text-base text-white font-stolzi-regular hover:py-2.25 hover:pe-4.5 hover:ps-10 hover:rounded-[26px] hover:border hover:border-white hover:shadow-[0_0_10px_0_rgba(65,127,255,0.47)] relative after:content-[''] after:h-2.75 after:w-3 after:bg-white after:absolute after:rounded-[100px] after:left-4.5 after:-translate-y-1/2 after:top-1/2 after:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] after:blur-xs after:hidden hover:after:block"
+                  >about</a
+                >
+              </li>
+              <li class="nav-items me-0 xl:me-12.5 mb-2.5 xl:mb-0">
+                <a
+                  href="./shop.html"
+                  class="links capitalize text-[13px] sm:text-base text-white font-stolzi-regular hover:py-2.25 hover:pe-4.5 hover:ps-10 hover:rounded-[26px] hover:border hover:border-white hover:shadow-[0_0_10px_0_rgba(65,127,255,0.47)] relative after:content-[''] after:h-2.75 after:w-3 after:bg-white after:absolute after:rounded-[100px] after:left-4.5 after:-translate-y-1/2 after:top-1/2 after:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] after:blur-xs after:hidden hover:after:block"
+                  >shop</a
+                >
+              </li>
+              <li class="nav-items">
+                <a
+                  href="./contact.html"
+                  class="links capitalize text-[13px] sm:text-base text-white font-stolzi-regular hover:py-2.25 hover:pe-4.5 hover:ps-10 hover:rounded-[26px] hover:border hover:border-white hover:shadow-[0_0_10px_0_rgba(65,127,255,0.47)] relative after:content-[''] after:h-2.75 after:w-3 after:bg-white after:absolute after:rounded-[100px] after:left-4.5 after:-translate-y-1/2 after:top-1/2 after:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] after:blur-xs after:hidden hover:after:block"
+                  >contact</a
+                >
+              </li>
+            </ul>
+
+            <div
+              class="nav-wrap flex items-center mx-auto xl:ms-auto xl:me-0 flex-col xl:flex-row"
+            >
+              <div
+                class="nav-icons flex items-center me-0 xl:me-10 flex-col xl:flex-row my-2.5 xl:my-0"
+              >
+                <div class="search-icon me-0 xl:me-6.5">
+                  <a href="#">
+                    <svg
+                      class="group origin-center stroke-white transition-all duration-300 hover:animate-[search-bounce_0.6s_cubic-bezier(0.34,1.56,0.64,1)_0.05s] hover:stroke-[#FFA70E] hover:drop-shadow-[0_0_8px_rgba(255,167,14,0.8)]"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="group-hover:stroke-[#FFA70E] transition-all duration-300"
+                        d="M24.5 24.5L19.4367 19.4367M22.1667 12.8333C22.1667 17.988 17.988 22.1667 12.8333 22.1667C7.67868 22.1667 3.5 17.988 3.5 12.8333C3.5 7.67868 7.67868 3.5 12.8333 3.5C17.988 3.5 22.1667 7.67868 22.1667 12.8333Z"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="cart-icon">
+                  <a href="#">
+                    <svg
+                      class="group origin-center transition-all duration-300 hover:animate-[cart-hover_0.5s_cubic-bezier(0.34,1.56,0.64,1)] hover:stroke-[#FFA70E] hover:drop-shadow-[0_0_8px_rgba(255,167,14,0.8)]"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="group-hover:stroke-[#FFA70E] transition-all duration-300"
+                        d="M2.3916 2.39167H4.72494L7.82827 16.8817C7.94211 17.4123 8.23738 17.8867 8.66326 18.2232C9.08915 18.5596 9.61899 18.7371 10.1616 18.725H21.5716C22.1026 18.7241 22.6175 18.5422 23.0311 18.2091C23.4448 17.8761 23.7324 17.412 23.8466 16.8933L25.7716 8.225H5.97327M10.4999 24.5C10.4999 25.1443 9.9776 25.6667 9.33327 25.6667C8.68894 25.6667 8.1666 25.1443 8.1666 24.5C8.1666 23.8557 8.68894 23.3333 9.33327 23.3333C9.9776 23.3333 10.4999 23.8557 10.4999 24.5ZM23.3333 24.5C23.3333 25.1443 22.8109 25.6667 22.1666 25.6667C21.5223 25.6667 20.9999 25.1443 20.9999 24.5C20.9999 23.8557 21.5223 23.3333 22.1666 23.3333C22.8109 23.3333 23.3333 23.8557 23.3333 24.5Z"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="nav-btn flex-none xl:flex items-center">
+                <a
+                  href="#"
+                  class="secondary-btn capitalize shadow-[0_5.42px_9.1px_0_rgba(116,0,0,1)] me-0 xl:me-6 w-full xl:w-fit text-center mb-2.5 xl:mb-0 ripple-btn relative overflow-hidden transition-all duration-500 ease-linear hover:scale-[1.1]"
+                  style="--ripple-color: rgba(255, 145, 145, 0.4)"
+                  ><span class="relative z-10">log in</span>
+                </a>
+
+                <a
+                  href="#"
+                  class="primary-btn capitalize shadow-[0_0_4px_0_rgba(255,255,255,0.3)] w-full xl:w-fit text-center ripple-btn relative overflow-hidden transition-all duration-500 ease-linear hover:scale-[1.1]"
+                  style="--ripple-color: rgba(255, 255, 255, 0.3)"
+                >
+                  <span class="relative z-10">sign up</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="menu group ms-auto w-7.5 z-999 relative block xl:hidden -translate-y-1/2"
+          >
+            <span
+              class="relative w-full h-px bg-[#FFD700] inline-block rounded-full transition-all duration-300 ease-in-out group-[.show]:bg-transparent before:content-[''] before:absolute before:left-0 before:right-0 before:h-px before:bg-[#FFD700] before:rounded-full before:top-1/2 before:-translate-y-1.5 before:transition-all before:duration-300 before:ease-in-out after:content-[''] after:absolute after:left-0 after:right-0 after:h-px after:bg-[#FFD700] after:rounded-full after:top-1/2 after:translate-y-1.5 after:transition-all after:duration-300 after:ease-in-out group-[.show]:before:translate-y-0 group-[.show]:before:rotate-45 group-[.show]:after:translate-y-0 group-[.show]:after:-rotate-45"
+            ></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- !header section ends here -->
+    <main>
+      <!-- *banner section starts here -->
+      <section
+        class="banner-sec min-h-screen relative overflow-hidden bg-black pt-25 pb-[53.2px]"
+      >
+        <div id="customSlider" class="h-full w-full">
+          <div
+            class="slide active bg-[url('../assets_index_page/slide1.png')]"
+          ></div>
+          <div class="slide bg-[url('../assets_index_page/slide2.png')]"></div>
+          <div class="slide bg-[url('../assets_index_page/slide3.png')]"></div>
+          <div class="slide bg-[url('../assets_index_page/slide4.png')]"></div>
+          <div class="slide bg-[url('../assets_index_page/slide5.png')]"></div>
+          <div class="slide bg-[url('../assets_index_page/slide6.png')]"></div>
+
+          <div class="overlay"></div>
+        </div>
+
+        <div class="container">
+          <div class="banner-ccntn relative z-20 text-center">
+            <h1
+              class="title1 text-white capitalize font-viaoda-libre text-[35px] sm:text-[49px] xl:text-[65px] 2xl:text-[96px] leading-tight mb-4 sm:mb-0"
+            >
+              A Curated World of Fine Books
+            </h1>
+            <p
+              class="desc text-white font-source-sance3 text-[13px] sm:text-[16px] 2xl:text-[24px] mb-4 leading-tight"
+            >
+              Discover rare editions, timeless literature, and beautifully
+              crafted books
+            </p>
+            <a
+              href="./shop.html"
+              class="primary-btn text-[13px] sm:text-base 2xl:text-[18px] capitalize bg-black shadow-[0_8px_20px_0_rgba(255,255,255,40),0_3px_10px_0_rgba(255,255,255,40),0_2px_5px_0_rgba(255,255,255,30)] transition-all duration-500 ease-linear hover:scale-[1.1]"
+              >shop now</a
+            >
+          </div>
+        </div>
+
+        <!-- BOTTOM CURVED CARDS -->
+        <div
+          id="carousel"
+          class="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen h-140 overflow-visible z-10"
+        >
+          <div
+            class="circle-card absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-74 h-112.5 rounded-2xl"
+          >
+            <img
+              src="./assets_index_page/book5.png"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="circle-card absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-74 h-112.5 rounded-2xl"
+          >
+            <img
+              src="./assets_index_page/book6.png"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="circle-card absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-74 h-112.5 rounded-2xl"
+          >
+            <img
+              src="./assets_index_page/book1.png"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="circle-card absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-74 h-112.5 rounded-2xl"
+          >
+            <img
+              src="./assets_index_page/book2.png"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="circle-card absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-74 h-112.5 rounded-2xl"
+          >
+            <img
+              src="./assets_index_page/book3.png"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="circle-card absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-74 h-112.5 rounded-2xl"
+          >
+            <img
+              src="./assets_index_page/book4.png"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- *banner section ends here -->
+
+      <!-- *editors section starts here -->
+      <section class="editor-sec bg-black py-8 lg:py-75 relative">
+        <div
+          class="editor-red-shadow absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-1"
+        >
+          <img
+            class="w-full h-full object-cover"
+            src="./assets_about_page/subscribe-red-shadow.png"
+            alt=""
+          />
+        </div>
+        <div class="container">
+          <div
+            class="editor-outer-box rounded-[18px] border border-white/20 bg-[rgba(123,0,0,0.14)] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] relative z-2"
+          >
+            <div class="editor-cntn py-8 sm:py-10.5">
+              <div class="flex flex-wrap -mx-3.75">
+                <div class="px-3.75 w-full md:w-[33.33%]">
+                  <div
+                    class="editor-card text-center pt-0 sm:pt-6 pb-6.25 px-8 sm:px-10.25 relative after:h-[0.5px] after:content-[''] after:absolute after:bg-white after:right-0 after:left-0 after:bottom-0 after:shadow-[0_0_10px_0_rgba(255,72,45,1)] after:block md:after:hidden"
+                  >
+                    <h4
+                      class="editor-card-hdr font-viaoda-libre text-[25px] sm:text-[36px] text-white text-shadow-[-4px_4px_26.1px_rgba(123,0,0,1)] mb-2.5 sm:mb-6 capitalize"
+                    >
+                      Editor’s Pick
+                    </h4>
+                    <p
+                      class="desc font-source-sance3 text-[15px] sm:text-[20px] text-white leading-7.5 mb-2.5 sm:mb-8.5"
+                    >
+                      Hand-selected books chosen for their depth, elegance, and
+                      lasting impact.
+                    </p>
+                    <a
+                      href="#"
+                      class="editor-link text-white font-source-sance3 text-[15px] sm:text-[20px] flex items-center justify-center"
+                    >
+                      <span
+                        class="relative after:bg-white after:h-px after:content[''] after:absolute after:bottom-0 after:left-0 after:right-0 capitalize me-2.5"
+                        >Explore</span
+                      >
+
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 12H19M19 12L12 5M19 12L12 19"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="px-3.75 w-full md:w-[33.33%]">
+                  <div
+                    class="editor-card text-center pt-6 pb-6.25 px-8 sm:px-10.25 relative after:w-[0.5px] after:content-[''] after:absolute after:bg-white after:right-0 after:top-0 after:bottom-0 after:shadow-[0_0_10px_0_rgba(255,72,45,1)] before:w-[0.5px] before:content-[''] before:absolute before:bg-white before:left-0 before:top-0 before:bottom-0 before:shadow-[0_0_10px_0_rgba(255,72,45,1)] after:hidden md:after:block before:hidden md:before:block"
+                  >
+                    <h4
+                      class="editor-card-hdr font-viaoda-libre text-[25px] sm:text-[36px] text-white text-shadow-[-4px_4px_26.1px_rgba(123,0,0,1)] mb-2.5 sm:mb-6 capitalize"
+                    >
+                      Limited Edition
+                    </h4>
+                    <p
+                      class="desc font-source-sance3 text-[15px] sm:text-[20px] text-white leading-7.5 mb-2.5 sm:mb-8.5"
+                    >
+                      Exclusive prints and collector’s editions available in
+                      limited quantities.
+                    </p>
+                    <a
+                      href="#"
+                      class="editor-link text-white font-source-sance3 text-[15px] sm:text-[20px] flex items-center justify-center"
+                    >
+                      <span
+                        class="relative after:bg-white after:h-px after:content[''] after:absolute after:bottom-0 after:left-0 after:right-0 capitalize me-2.5"
+                        >Explore</span
+                      >
+
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 12H19M19 12L12 5M19 12L12 19"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="px-3.75 w-full md:w-[33.33%]">
+                  <div
+                    class="editor-card text-center pt-6 pb-0 sm:pb-6.25 px-8 sm:px-10.25 relative after:h-[0.5px] after:content-[''] after:absolute after:bg-white after:right-0 after:left-0 after:top-0 after:shadow-[0_0_10px_0_rgba(255,72,45,1)] after:block md:after:hidden"
+                  >
+                    <h4
+                      class="editor-card-hdr font-viaoda-libre text-[25px] sm:text-[36px] text-white text-shadow-[-4px_4px_26.1px_rgba(123,0,0,1)] mb-2.5 sm:mb-6 capitalize"
+                    >
+                      Classics
+                    </h4>
+                    <p
+                      class="desc font-source-sance3 text-[15px] sm:text-[20px] text-white leading-7.5 mb-2.5 sm:mb-8.5 max-w-96.75 mx-auto"
+                    >
+                      Enduring masterpieces that continue to inspire across
+                      generations.
+                    </p>
+                    <a
+                      href="#"
+                      class="editor-link text-white font-source-sance3 text-[15px] sm:text-[20px] flex items-center justify-center"
+                    >
+                      <span
+                        class="relative after:bg-white after:h-px after:content[''] after:absolute after:bottom-0 after:left-0 after:right-0 capitalize me-2.5"
+                        >Explore</span
+                      >
+
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 12H19M19 12L12 5M19 12L12 19"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- *editors section ends here -->
+
+      <!-- *best seller section starts here  -->
+      <section class="best-sel-sec bg-black py-8 sm:py-25">
+        <div class="container">
+          <div class="flex flex-wrap -mx-3.75">
+            <div class="px-3.75 w-full lg:w-1/2">
+              <div class="best-sel-cntn">
+                <h2
+                  class="best-sel-head text-center lg:text-left text-[30px] sm:text-[64px] text-white capitalize font-viaoda-libre mb-4 sm:mb-0"
+                >
+                  Best Seller
+                </h2>
+                <p
+                  class="desc text-white font-source-sance3 text-[16px] sm:text-[24px] leading-normal sm:leading-8.75 max-w-153.25 mb-4 sm:mb-10 mx-auto lg:mx-0 text-center sm:text-left"
+                >
+                  Our most sought-after titles—loved by readers who value
+                  quality and storytelling.
+                </p>
+
+                <div class="splide" id="vertical-slider">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide h-full">
+                        <div
+                          class="best-sel-card max-w-162 h-full mx-auto lg:mx-0"
+                        >
+                          <h3
+                            class="best-sel-card-head capitalize text-white font-viaoda-libre text-[26px] sm:text-[48px] sm:leading-16.25 mb-8"
+                          >
+                            From the World of Percy Jackson: The Court of the
+                            Dead
+                          </h3>
+                          <p
+                            class="author text-[20px] sm:text-[32px] font-source-sance3 text-white mb-10"
+                          >
+                            By:
+                            <span class="text-[rgba(218,31,4,1)]"
+                              >Rick Riordan and Mark Oshiro</span
+                            >
+                          </p>
+                          <p
+                            class="format font-source-sance3 text-[16px] sm:text-[24px] text-[rgba(255,147,147,1)]"
+                          >
+                            Available Formats
+                          </p>
+                          <p
+                            class="printing font-source-sance3 text-[16px] sm:text-[24px] text-white"
+                          >
+                            Print, E-Book
+                          </p>
+                        </div>
+                      </li>
+                      <li class="splide__slide h-full">
+                        <div
+                          class="best-sel-card max-w-162 h-full mx-auto lg:mx-0"
+                        >
+                          <h3
+                            class="best-sel-card-head capitalize text-white font-viaoda-libre text-[26px] sm:text-[48px] leading-16.25 mb-8"
+                          >
+                            From the World of Percy Jackson: The Sun and the
+                            Star
+                          </h3>
+                          <p
+                            class="author text-[20px] sm:text-[32px] font-source-sance3 text-white mb-10"
+                          >
+                            By:
+                            <span class="text-[rgba(218,31,4,1)]"
+                              >Rick Riordan and Mark Oshiro</span
+                            >
+                          </p>
+                          <p
+                            class="format font-source-sance3 text-[16px] sm:text-[24px] text-[rgba(255,147,147,1)]"
+                          >
+                            Available Formats
+                          </p>
+                          <p
+                            class="printing font-source-sance3 text-[16px] sm:text-[24px] text-white"
+                          >
+                            Print
+                          </p>
+                        </div>
+                      </li>
+                      <li class="splide__slide h-full">
+                        <div
+                          class="best-sel-card max-w-162 h-full mx-auto lg:mx-0"
+                        >
+                          <h3
+                            class="best-sel-card-head capitalize text-white font-viaoda-libre text-[26px] sm:text-[48px] leading-16.25 mb-8"
+                          >
+                            The Sea of Monsters
+                          </h3>
+                          <p
+                            class="author text-[20px] sm:text-[32px] font-source-sance3 text-white mb-10"
+                          >
+                            By:
+                            <span class="text-[rgba(218,31,4,1)]"
+                              >Rick Riordan</span
+                            >
+                          </p>
+                          <p
+                            class="format font-source-sance3 text-[16px] sm:text-[24px] text-[rgba(255,147,147,1)]"
+                          >
+                            Available Formats
+                          </p>
+                          <p
+                            class="printing font-source-sance3 text-[16px] sm:text-[24px] text-white"
+                          >
+                            Print
+                          </p>
+                        </div>
+                      </li>
+                      <li class="splide__slide h-full">
+                        <div
+                          class="best-sel-card max-w-162 h-full mx-auto lg:mx-0"
+                        >
+                          <h3
+                            class="best-sel-card-head capitalize text-white font-viaoda-libre text-[26px] sm:text-[48px] leading-16.25 mb-8"
+                          >
+                            The Sea of Monsters The Heroes of Olympus
+                          </h3>
+                          <p
+                            class="author text-[20px] sm:text-[32px] font-source-sance3 text-white mb-10"
+                          >
+                            By:
+                            <span class="text-[rgba(218,31,4,1)]"
+                              >Rick Riordan</span
+                            >
+                          </p>
+                          <p
+                            class="format font-source-sance3 text-[16px] sm:text-[24px] text-[rgba(255,147,147,1)]"
+                          >
+                            Available Formats
+                          </p>
+                          <p
+                            class="printing font-source-sance3 text-[16px] sm:text-[24px] text-white"
+                          >
+                            Print
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="best-sel-btn text-center lg:text-left">
+                  <a
+                    href="#"
+                    class="primary-btn capitalize shadow-[0_8px_20px_0_rgba(255,255,255,0.4),0_3px_10px_0_rgba(255,255,255,0.4),0_2px_5px_0_rgba(255,255,255,0.3)] my-8 me-0 sm:me-10 w-full sm:w-fit hover:scale-[1.1] hover:shadow-[0_0_6px_rgba(255,72,45,0.9),0_0_12px_rgba(255,72,45,0.7),0_0_25px_rgba(255,72,45,0.5),0_0_50px_rgba(255,72,45,0.3),inset_0_4px_36px_rgba(255,195,0,0.25)] transition-all duration-1500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                    >shop now</a
+                  >
+                  <a
+                    href="#"
+                    class="hover:translate-x-0.5 transition-transform duration-300 details-btn text-white font-stolzi-regular text-[15px] sm:text-[18px] relative after:bg-white after:h-px after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 mb-8 sm:mb-0 before:content-['→'] before:absolute before:-right-5 before:-top-3 before:-rotate-45 before:opacity-0 before:-translate-x-1.5 before:translate-y-1.5 before:transition-all before:duration-300 before:ease-[cubic-bezier(0.22,1,0.36,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:translate-y-0 capitalize"
+                    >view details</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="px-3.75 w-full lg:w-1/2">
+              <div
+                class="splide relative z-10 after:content-[''] after:absolute after:h-25 sm:after:h-50 lg:after:h-121 after:w-25 sm:after:w-50 lg:after:w-121 after:bg-[radial-gradient(circle,#FFA70E_0%,#F69C00_100%)] after:rounded-full after:blur-[50px] sm:after:blur-[100px] after:-z-10 after:top-1/2 after:left-1/2 lg:after:-left-[7%] after:-translate-x-1/2 lg:after:translate-x-0 after:-translate-y-1/2"
+                id="card-slider"
+              >
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <div class="card h-120 sm:h-172">
+                        <img src="./assets_index_page/8.png" alt="" />
+                      </div>
+                    </li>
+
+                    <li class="splide__slide">
+                      <div class="card h-120 sm:h-172">
+                        <img src="./assets_index_page/2.png" alt="" />
+                      </div>
+                    </li>
+
+                    <li class="splide__slide">
+                      <div class="card h-120 sm:h-172">
+                        <img src="./assets_index_page/4.png" alt="" />
+                      </div>
+                    </li>
+
+                    <li class="splide__slide">
+                      <div class="card h-120 sm:h-172">
+                        <img src="./assets_index_page/6.png" alt="" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- *best seller section ends here -->
+
+      <!-- *curated section starts here -->
+      <section class="curated-sec bg-black pt-8 pb-20 sm:py-25">
+        <div class="container">
+          <h2
+            class="title2 text-white capitalize font-viaoda-libre text-[30px] text-center lg:text-left sm:text-[64px] mb-4 sm:mb-6.5"
+          >
+            Recently Curated
+          </h2>
+          <div
+            class="desc-links flex items-center justify-between mb-15 sm:mb-20 flex-col lg:flex-row"
+          >
+            <p
+              class="desc text-white font-source-sance3 text-[16px] sm:text-[24px] mb-6 lg:mb-0 text-center lg:text-left mx-auto lg:mx-0 max-w-164.25"
+            >
+              Fresh additions to our collection, featuring contemporary voices
+              and modern classics.
+            </p>
+            <div class="extr-link">
+              <a
+                href="#"
+                class="details-btn text-white font-stolzi-regular text-[15px] sm:text-[18px] relative after:bg-white after:h-px after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 capitalize"
+                >view more</a
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-wrap -mx-3.75">
+            <div class="px-3.75 w-full sm:w-1/2 xl:w-1/4">
+              <div
+                class="collection-card mb-40 xl:mb-0 mx-auto xl:mx-0 max-w-106.25 shadow-[0_3px_2.85px_0_rgba(255,74,22,0.2),0_5px_112.7px_0_rgba(255,74,22,0.3)] overflow-hidden rounded-[39px] relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-full after:bg-[linear-gradient(to_bottom,rgba(0,0,0,0),rgba(123,0,0,1))] after:opacity-0 after:z-10 after:transition-all after:duration-2000 after:delay-500 after:ease-[cubic-bezier(0.22,1,0.36,1)] hover:after:opacity-50 hover:after:transition-all hover:after:duration-800 hover:after:ease-[cubic-bezier(0.65,0,0.35,1)] group group-[.active]:after:opacity-50"
+              >
+                <div
+                  class="hover-card w-67.5 xl:w-79.25 bg-[rgba(0,0,0,0.5)] absolute z-20 left-1/2 top-1/2 translate-x-[-50%] translate-y-[150%] rounded-[35px] backdrop-blur-[15px] py-[34.4px] px-2.5 xl:px-13.25 transition-transform duration-2000 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-[-50%] group-[.active]:translate-y-[-50%]"
+                >
+                  <div
+                    class="hover-card-cntn flex flex-col items-center text-white font-stolzi-regular capitalize"
+                  >
+                    <p class="book-name text-[20px] mb-2">The Book of Bill</p>
+                    <p class="writer mb-4">
+                      By:
+                      <span class="text-[rgba(237,185,43,1)]">Alex Hirsch</span>
+                    </p>
+                    <p class="printing mb-4">Available Formats: Print</p>
+                    <a
+                      href="#"
+                      class="primary-btn bg-black text-[15px] xl:text-[18px] py-4 xl:py-5.5 px-6 xl:px-9.25 text-center shadow-[0_8px_20px_0_rgba(255,255,255,0.4),0_3px_10px_0_rgba(255,255,255,0.4),0_2px_5px_0_rgba(255,255,255,0.3)]"
+                      >shop books</a
+                    >
+                  </div>
+                </div>
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets_index_page/collection1.png"
+                  alt=""
+                />
+                <div
+                  class="edition-card border-2 border-white bg-[rgba(13,12,12,1)] absolute pt-5 sm:pt-7.75 pb-2.5 sm:pb-6 px-2.5 sm:px-10 z-30 bottom-0.5 rounded-tl-[100px] rounded-tr-[100px] w-40 sm:w-65.25 left-1/2 -translate-x-1/2 shadow-[0_0_4px_0_rgba(175,23,0,0.3),0_0_5px_0_rgba(255,72,45,0.6),0_0_3px_0_rgba(255,72,45,0.8),0.25px_0.25px_1px_0_rgba(255,72,45,1),-0.25px_-0.25px_1px_0_rgba(255,72,45,1)]"
+                >
+                  <p
+                    class="text font-stolzi-regular font-medium text-[13px] sm:text-[20px] capitalize text-center text-white"
+                  >
+                    Limited Edition
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="px-3.75 w-full sm:w-1/2 xl:w-1/4">
+              <div
+                class="collection-card mb-40 xl:mb-0 mx-auto xl:mx-0 max-w-106.25 shadow-[0_2.77px_2.21px_0_rgba(98,149,247,0.2),0_6.65px_112px_0_rgba(98,149,247,0.3)] overflow-hidden rounded-[39px] relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-full after:bg-[linear-gradient(to_bottom,rgba(0,0,0,0),rgba(13,49,125,1))] after:opacity-0 after:z-10 after:transition-all after:duration-2000 after:delay-500 after:ease-[cubic-bezier(0.22,1,0.36,1)] hover:after:opacity-80 hover:after:transition-all hover:after:duration-800 hover:after:ease-[cubic-bezier(0.65,0,0.35,1)] group group-[.active]:after:opacity-50"
+              >
+                <div
+                  class="hover-card w-67.5 xl:w-79.25 bg-[rgba(0,0,0,0.5)] absolute z-20 left-1/2 top-1/2 translate-x-[-50%] translate-y-[150%] rounded-[35px] backdrop-blur-[15px] py-[34.4px] px-2.5 xl:px-7.25 transition-transform duration-2000 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-[-50%] group-[.active]:translate-y-[-50%]"
+                >
+                  <div
+                    class="hover-card-cntn flex flex-col items-center text-white font-stolzi-regular capitalize"
+                  >
+                    <p class="book-name text-[20px] mb-2">
+                      Part of Your Nightmare
+                    </p>
+                    <p class="writer mb-4">
+                      By:
+                      <span class="text-[rgba(237,185,43,1)]">Alex Hirsch</span>
+                    </p>
+                    <p class="printing mb-4">Available Formats: Print</p>
+                    <a
+                      href="#"
+                      class="primary-btn bg-black text-[15px] xl:text-[18px] py-4 xl:py-5.5 px-6 xl:px-9.25 text-center shadow-[0_8px_20px_0_rgba(255,255,255,0.4),0_3px_10px_0_rgba(255,255,255,0.4),0_2px_5px_0_rgba(255,255,255,0.3)]"
+                      >shop books</a
+                    >
+                  </div>
+                </div>
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets_index_page/collection2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="px-3.75 w-full sm:w-1/2 xl:w-1/4">
+              <div
+                class="collection-card mb-40 sm:mb-0 mx-auto xl:mx-0 max-w-106.25 shadow-[0_3px_2.85px_0_rgba(255,74,22,0.2),0_5px_112px_0_rgba(255,74,22,0.3)] overflow-hidden rounded-[39px] relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-full after:bg-[linear-gradient(to_bottom,rgba(0,0,0,0),rgba(199,49,53,1))] after:opacity-0 after:z-10 after:transition-all after:duration-2000 after:delay-500 after:ease-[cubic-bezier(0.22,1,0.36,1)] hover:after:opacity-80 hover:after:transition-all hover:after:duration-800 hover:after:ease-[cubic-bezier(0.65,0,0.35,1)] group group-[.active]:after:opacity-50"
+              >
+                <div
+                  class="hover-card w-67.5 xl:w-79.25 bg-[rgba(0,0,0,0.5)] absolute z-20 left-1/2 top-1/2 translate-x-[-50%] translate-y-[150%] rounded-[35px] backdrop-blur-[15px] py-[34.4px] px-2.5 xl:px-7.25 transition-transform duration-2000 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-[-50%] group-[.active]:translate-y-[-50%]"
+                >
+                  <div
+                    class="hover-card-cntn flex flex-col items-center text-white font-stolzi-regular capitalize"
+                  >
+                    <p class="book-name text-[20px] mb-2">
+                      Black Panther: Uprising
+                    </p>
+                    <p class="writer mb-4">
+                      By:
+                      <span class="text-[rgba(237,185,43,1)]"
+                        >Ronald L. Smith</span
+                      >
+                    </p>
+                    <p class="printing mb-4">Available Formats: Print</p>
+                    <a
+                      href="#"
+                      class="primary-btn bg-black text-[15px] xl:text-[18px] py-4 xl:py-5.5 px-6 xl:px-9.25 text-center shadow-[0_8px_20px_0_rgba(255,255,255,0.4),0_3px_10px_0_rgba(255,255,255,0.4),0_2px_5px_0_rgba(255,255,255,0.3)]"
+                      >shop books</a
+                    >
+                  </div>
+                </div>
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets_index_page/collection3.png"
+                  alt=""
+                />
+                <div
+                  class="edition-card border-2 border-white bg-[rgba(13,12,12,1)] absolute pt-5 sm:pt-7.75 pb-2.5 sm:pb-6 px-2.5 sm:px-10 z-30 bottom-0.5 rounded-tl-[100px] rounded-tr-[100px] w-40 sm:w-65.25 left-1/2 -translate-x-1/2 shadow-[0_0_4px_0_rgba(175,23,0,0.3),0_0_5px_0_rgba(255,72,45,0.6),0_0_3px_0_rgba(255,72,45,0.8),0.25px_0.25px_1px_0_rgba(255,72,45,1),-0.25px_-0.25px_1px_0_rgba(255,72,45,1)]"
+                >
+                  <p
+                    class="text font-stolzi-regular font-medium text-[13px] sm:text-[20px] capitalize text-center text-white"
+                  >
+                    Limited Edition
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="px-3.75 w-full sm:w-1/2 xl:w-1/4">
+              <div
+                class="collection-card mx-auto xl:mx-0 max-w-106.25 shadow-[0_2.51px_2.54px_0_rgba(255,162,0,0.1953),0_6.34px_112px_0_rgba(255,162,0,0.3)] overflow-hidden rounded-[39px] relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-full after:bg-[linear-gradient(to_bottom,rgba(0,0,0,0),rgba(214,173,4,1))] after:opacity-0 after:z-10 after:transition-all after:duration-2000 after:delay-500 after:ease-[cubic-bezier(0.22,1,0.36,1)] hover:after:opacity-80 hover:after:transition-all hover:after:duration-800 hover:after:ease-[cubic-bezier(0.65,0,0.35,1)] group group-[.active]:after:opacity-50"
+              >
+                <div
+                  class="hover-card w-67.5 xl:w-79.25 bg-[rgba(0,0,0,0.5)] absolute z-20 left-1/2 top-1/2 translate-x-[-50%] translate-y-[150%] rounded-[35px] backdrop-blur-[15px] py-[34.4px] px-2.5 xl:px-7.25 transition-transform duration-2000 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-[-50%] group-[.active]:translate-y-[-50%]"
+                >
+                  <div
+                    class="hover-card-cntn flex flex-col items-center text-white font-stolzi-regular capitalize"
+                  >
+                    <p class="book-name text-[20px] mb-2">Truth to Power</p>
+                    <p class="writer mb-4">
+                      By:
+                      <span class="text-[rgba(237,185,43,1)]">S.A. Cosby</span>
+                    </p>
+                    <p class="printing mb-4">Available Formats: Print</p>
+                    <a
+                      href="#"
+                      class="primary-btn bg-black text-[15px] xl:text-[18px] py-4 xl:py-5.5 px-6 xl:px-9.25 text-center shadow-[0_8px_20px_0_rgba(255,255,255,0.4),0_3px_10px_0_rgba(255,255,255,0.4),0_2px_5px_0_rgba(255,255,255,0.3)]"
+                      >shop books</a
+                    >
+                  </div>
+                </div>
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets_index_page/collection4.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- *curated section ends here -->
+
+      <!-- *stories section starts here -->
+      <section
+        class="stories-sec bg-black pt-60 pb-8 sm:py-60 relative overflow-hidden overflow-y-visible"
+      >
+        <div
+          class="stories-shadow absolute z-10 -translate-y-1/2 md:translate-y-0 top-1/2 md:top-[15%] -left-23.5 h-71 w-66.75 rounded-full bg-[rgba(119,66,0,1)] blur-[100px]"
+        ></div>
+        <div class="container">
+          <div class="stories-cntn relative z-20">
+            <h2
+              class="title2 font-viaoda-libre text-[30px] sm:text-[64px] text-center sm:text-left text-white capitalize mb-6.5 mt-10 sm:mt-0"
+            >
+              From The Editor
+            </h2>
+            <div
+              class="editor-story max-w-209 text-white font-source-sance3 text-[16px] sm:text-[24px] text-shadow-[0_4px_19.6px_rgba(255,255,255,0.62)] text-center lg:text-left"
+            >
+              <p class="desc leading-8.75 text-white/81 mb-6">
+                Our curation is guided by a simple philosophy: meaningful
+                stories deserve beautiful editions. From modern voices to
+                timeless classics, each book is chosen to earn its place on your
+                shelf.This library is the result of thoughtful selection and
+                refined taste. Each book is chosen for its contribution to
+                literature, its craftsmanship, and its ability to resonate
+                beyond the moment.
+              </p>
+              <p class="editor-name font-medium text-right lg:text-left">
+                — Editor-in-Chief
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="stories-library w-80 sm:w-100 xl:w-180 2xl:w-261.5 absolute z-10 top-[5%] md:top-[10%] xl:top-1/2 translate-y-0 xl:-translate-y-1/2 right-0"
+        >
+          <img
+            class="w-full h-full object-cover"
+            src="./assets_index_page/stories-library.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- *stories section ends here -->
+
+      <!-- *why-choose-us section starts here -->
+      <section class="why-choose-us-sec bg-black py-8 sm:py-25">
+        <div class="container">
+          <h2
+            class="title2 text-white capitalize text-[30px] sm:text-[64px] font-viaoda-libre text-center mb-10 md:mb-30"
+          >
+            Why Choose Us
+          </h2>
+
+          <div class="flex flex-wrap -mx-3.75">
+            <div class="px-3.75 w-full lg:w-1/2 xl:w-1/4">
+              <div
+                class="choose-us-card mb-8 xl:mb-0 rounded-[42px] bg-[rgba(217,217,217,0.2)] backdrop-blur-[60px] border border-white/20 relative overflow-hidden before:z-10 before:content-[''] before:absolute before:bg-white before:h-23.5 before:w-23.5 before:rounded-full before:-left-5.5 before:-top-5.75 before:shadow-[0_0_8.55px_0_rgba(255,255,255,1),0_0_17.1px_0_rgba(255,255,255,1),0_0_59.85px_0_rgba(255,255,255,1),0_0_119.7px_0_rgba(255,255,255,1),0_0_205.2px_0_rgba(255,255,255,1),0_0_250px_0_rgba(255,255,255,1)] before:transition-opacity before:duration-200 before:ease-out before:opacity-100 hover:before:opacity-0 after:z-10 after:content-[''] after:absolute after:bg-[rgba(255,183,59,1)] after:h-23.5 after:w-23.5 after:rounded-full after:-left-5.5 after:-top-5.75 after:shadow-[0_0_8.55px_0_rgba(255,167,14,1),0_0_17.1px_0_rgba(255,167,14,1),0_0_59.85px_0_rgba(255,167,14,1),0_0_119.7px_0_rgba(255,167,14,1),0_0_205.2px_0_rgba(255,167,14,1),0_0_250px_0_rgba(255,167,14,1)] after:transition-opacity after:duration-1400 after:ease-[cubic-bezier(0.16,1,0.3,1)] after:opacity-0 hover:after:opacity-100 after:delay-200"
+              >
+                <div
+                  class="choose-cntn py-17 px-6 text-white text-center relative z-20"
+                >
+                  <h3
+                    class="hdr font-viaoda-libre capitalize text-[25px] sm:text-[32px] mb-4"
+                  >
+                    Thoughtfully Curated
+                  </h3>
+                  <p class="desc font-source-sance3 leading-7.5">
+                    Every book is selected for its literary value,
+                    craftsmanship, and lasting relevance—never for trends alone.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="px-3.75 w-full lg:w-1/2 xl:w-1/4">
+              <div
+                class="choose-us-card mb-8 xl:mb-0 rounded-[42px] bg-[rgba(217,217,217,0.2)] backdrop-blur-[60px] border border-white/20 relative overflow-hidden before:z-10 before:content-[''] before:absolute before:bg-white before:h-23.5 before:w-23.5 before:rounded-full before:-left-5.5 before:-top-5.75 before:shadow-[0_0_8.55px_0_rgba(255,255,255,1),0_0_17.1px_0_rgba(255,255,255,1),0_0_59.85px_0_rgba(255,255,255,1),0_0_119.7px_0_rgba(255,255,255,1),0_0_205.2px_0_rgba(255,255,255,1),0_0_250px_0_rgba(255,255,255,1)] before:transition-opacity before:duration-200 before:ease-out before:opacity-100 hover:before:opacity-0 after:z-10 after:content-[''] after:absolute after:bg-[rgba(255,183,59,1)] after:h-23.5 after:w-23.5 after:rounded-full after:-left-5.5 after:-top-5.75 after:shadow-[0_0_8.55px_0_rgba(255,167,14,1),0_0_17.1px_0_rgba(255,167,14,1),0_0_59.85px_0_rgba(255,167,14,1),0_0_119.7px_0_rgba(255,167,14,1),0_0_205.2px_0_rgba(255,167,14,1),0_0_250px_0_rgba(255,167,14,1)] after:transition-opacity after:duration-1400 after:ease-[cubic-bezier(0.16,1,0.3,1)] after:opacity-0 hover:after:opacity-100 after:delay-200"
+              >
+                <div
+                  class="choose-cntn py-17 px-6 text-white text-center relative z-20"
+                >
+                  <h3
+                    class="hdr font-viaoda-libre capitalize text-[25px] sm:text-[32px] mb-4"
+                  >
+                    Premium Editions
+                  </h3>
+                  <p class="desc font-source-sance3 leading-7.5">
+                    From limited prints to special editions, we focus on
+                    offering books that feel exclusive and valuable.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="px-3.75 w-full lg:w-1/2 xl:w-1/4">
+              <div
+                class="choose-us-card mb-8 lg:mb-0 rounded-[42px] bg-[rgba(217,217,217,0.2)] backdrop-blur-[60px] border border-white/20 relative overflow-hidden before:z-10 before:content-[''] before:absolute before:bg-white before:h-23.5 before:w-23.5 before:rounded-full before:-left-5.5 before:-top-5.75 before:shadow-[0_0_8.55px_0_rgba(255,255,255,1),0_0_17.1px_0_rgba(255,255,255,1),0_0_59.85px_0_rgba(255,255,255,1),0_0_119.7px_0_rgba(255,255,255,1),0_0_205.2px_0_rgba(255,255,255,1),0_0_250px_0_rgba(255,255,255,1)] before:transition-opacity before:duration-200 before:ease-out before:opacity-100 hover:before:opacity-0 after:z-10 after:content-[''] after:absolute after:bg-[rgba(255,183,59,1)] after:h-23.5 after:w-23.5 after:rounded-full after:-left-5.5 after:-top-5.75 after:shadow-[0_0_8.55px_0_rgba(255,167,14,1),0_0_17.1px_0_rgba(255,167,14,1),0_0_59.85px_0_rgba(255,167,14,1),0_0_119.7px_0_rgba(255,167,14,1),0_0_205.2px_0_rgba(255,167,14,1),0_0_250px_0_rgba(255,167,14,1)] after:transition-opacity after:duration-1400 after:ease-[cubic-bezier(0.16,1,0.3,1)] after:opacity-0 hover:after:opacity-100 after:delay-200"
+              >
+                <div
+                  class="choose-cntn py-17 px-6 text-white text-center relative z-20"
+                >
+                  <h3
+                    class="hdr font-viaoda-libre capitalize text-[25px] sm:text-[32px] mb-4"
+                  >
+                    Seamless Shopping
+                  </h3>
+                  <p class="desc font-source-sance3 leading-7.5">
+                    Our platform is designed with clear navigation, simple
+                    browsing, and a smooth checkout process.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="px-3.75 w-full lg:w-1/2 xl:w-1/4">
+              <div
+                class="choose-us-card rounded-[42px] bg-[rgba(217,217,217,0.2)] backdrop-blur-[60px] border border-white/20 relative overflow-hidden before:z-10 before:content-[''] before:absolute before:bg-white before:h-23.5 before:w-23.5 before:rounded-full before:-left-5.5 before:-top-5.75 before:shadow-[0_0_8.55px_0_rgba(255,255,255,1),0_0_17.1px_0_rgba(255,255,255,1),0_0_59.85px_0_rgba(255,255,255,1),0_0_119.7px_0_rgba(255,255,255,1),0_0_205.2px_0_rgba(255,255,255,1),0_0_250px_0_rgba(255,255,255,1)] before:transition-opacity before:duration-200 before:ease-out before:opacity-100 hover:before:opacity-0 after:z-10 after:content-[''] after:absolute after:bg-[rgba(255,183,59,1)] after:h-23.5 after:w-23.5 after:rounded-full after:-left-5.5 after:-top-5.75 after:shadow-[0_0_8.55px_0_rgba(255,167,14,1),0_0_17.1px_0_rgba(255,167,14,1),0_0_59.85px_0_rgba(255,167,14,1),0_0_119.7px_0_rgba(255,167,14,1),0_0_205.2px_0_rgba(255,167,14,1),0_0_250px_0_rgba(255,167,14,1)] after:transition-opacity after:duration-1400 after:ease-[cubic-bezier(0.16,1,0.3,1)] after:opacity-0 hover:after:opacity-100 after:delay-200"
+              >
+                <div
+                  class="choose-cntn py-17 px-6 text-white text-center relative z-20"
+                >
+                  <h3
+                    class="hdr font-viaoda-libre capitalize text-[25px] sm:text-[32px] mb-4"
+                  >
+                    Reader-Centered Approach
+                  </h3>
+                  <p class="desc font-source-sance3 leading-7.5">
+                    We prioritize the reader’s journey by providing detailed
+                    descriptions, reviews, and recommendations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- *why-choose-us section ends here -->
+
+      <!-- *literature-review section starts here -->
+      <section
+        class="litr-rev-sec bg-black py-8 sm:py-25 relative overflow-hidden after:z-20 after:content-[''] after:absolute after:top-[25%] md:after:top-1/2 after:translate-y-0 md:after:-translate-y-1/2 after:-right-15.25 after:h-20 after:w-20 sm:after:h-27.5 sm:after:w-27.5 after:bg-[rgba(255,183,59,1)] after:rounded-full after:blur-[10.6px] after:shadow-[0_0_8.55px_0_rgba(255,167,14,1),0_0_17.1px_0_rgba(255,167,14,1),0_0_59.85px_0_rgba(255,167,14,1),0_0_119.7px_0_rgba(255,167,14,1),0_0_205.2px_0_rgba(255,167,14,0.2),0_0_250px_0_rgba(255,167,14,0.2)]"
+      >
+        <div class="container relative z-10">
+          <div class="flex flex-wrap-reverse -mx-3.75 items-center">
+            <div class="px-3.75 w-full md:w-1/2">
+              <div
+                class="review-img mx-auto md:mx-0 max-w-218.25 relative z-30"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="./assets_index_page/review-img.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="px-3.75 w-full md:w-1/2">
+              <div class="review-cntn-outer-box">
+                <div class="review-cntn text-center md:text-left">
+                  <h3
+                    class="review-head text-white font-viaoda-libre text-[25px] sm:text-[40px] mb-4 sm:mb-8 relative z-30"
+                  >
+                    “An exceptional destination for thoughtfully chosen and
+                    finely crafted books.”
+                  </h3>
+                  <p
+                    class="desc text-white capitalize font-source-sance3 text-[16px] sm:text-[24px] text-shadow-[0_0_14.4px_rgba(255,255,255,0.86)] relative z-30"
+                  >
+                    — Literary Review
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- *literature-review section ends here -->
+
+      <!-- *subscription section starts here -->
+      <section class="subscribe-sec bg-black py-8 sm:pt-0 sm:pb-45">
+        <div class="container">
+          <div
+            class="subscribe-outer-box py-15 sm:py-23.5 px-8 border border-white rounded-[30px] shadow-[0_0_40px_rgba(255,74,22,0.25),0_0_80px_rgba(255,74,22,0.15),inset_0_0_10px_rgba(255,74,22,0.4)] relative z-2"
+          >
+            <div
+              class="red-shadow absolute top-1/2 left-1/2 -translate-x-1/2 z-1 -translate-y-1/2"
+            >
+              <img
+                class="w-full h-full object-cover"
+                src="./assets_about_page/subscribe-red-shadow.png"
+                alt=""
+              />
+            </div>
+            <div class="subscribe-cntn relative z-3">
+              <h2
+                class="subscribe-head font-viaoda-libre text-[30px] sm:text-[64px] text-white text-center mb-4.5"
+              >
+                Join Our Inner Circle
+              </h2>
+              <p
+                class="desc text-center text-white font-source-sance3 text-[16px] sm:text-[24px] mb-8"
+              >
+                Receive early access to curated collections, limited editions,
+                and thoughtful reading selections—delivered with discretion.
+              </p>
+              <div class="max-w-213 mx-auto static md:relative">
+                <form action="" class="subscribe-form">
+                  <input
+                    type="email"
+                    name="email"
+                    id="subscriber-email"
+                    placeholder="email address"
+                    class="text-white py-3 sm:py-5.5 px-4 sm:px-8 bg-transparent rounded-[72px] outline-2 outline-white shadow-[0_0_6px_rgba(255,72,45,0.9),0_0_12px_rgba(255,72,45,0.7),0_0_25px_rgba(255,72,45,0.5),0_0_50px_rgba(255,72,45,0.3)] placeholder:font-source-sance3 placeholder:text-center placeholder:sm:text-left placeholder:text-[15px] placeholder:sm:text-[24px] placeholder:text-[rgba(255,255,2555,0.87)] placeholder:capitalize w-full mb-18 md:mb-0"
+                  />
+                  <input
+                    type="submit"
+                    value="Subscribe"
+                    class="static md:absolute right-0 top-0 bottom-0 font-source-sance3 text-center text-[15px] sm:text-[24px] text-white py-3 md:py-0 px-0 sm:px-15.5 bg-[rgba(29,29,29,1)] rounded-[72px] outline-2 outline-white shadow-[0_0_6px_rgba(255,72,45,0.9),0_0_12px_rgba(255,72,45,0.7),0_0_25px_rgba(255,72,45,0.5),0_0_50px_rgba(255,72,45,0.3)] hover:shadow-[0_0_6px_rgba(255,72,45,0.9),0_0_12px_rgba(255,72,45,0.7),0_0_25px_rgba(255,72,45,0.5),0_0_50px_rgba(255,72,45,0.3),inset_0_4px_36px_rgba(255,195,0,0.25)] transition-all duration-1500 ease-[cubic-bezier(0.22,1,0.36,1)] w-full md:w-fit"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- *subscription section ends here -->
+    </main>
+
+    <!-- !footer section starts here -->
+    <footer class="footer-sec bg-black">
+      <div class="container">
+        <div class="footer-top pt-3.75 text-center">
+          <div
+            class="footer-hdr font-viaoda-libre text-[25px] sm:text-[36px] text-white mb-3.75"
+          >
+            A thoughtfully curated online library.
+          </div>
+          <div class="line-break h-px bg-white/27"></div>
+          <ul
+            class="flex justify-center my-4 items-center flex-col sm:flex-row"
+          >
+            <li class="footer-items text-[13px] sm:text-base">
+              <a
+                href="./index.html"
+                class="footer-links text-white font-stolzi-regular capitalize me-0 sm:me-12.5 mb-2.5 sm:mb-0 relative after:content-[''] after:absolute after:h-px after:bg-[rgba(255,149,49,1)] after:left-0 after:bottom-0 after:w-[0%] after:transition-all after:duration-700 after:ease-linear hover:after:w-full hover:after:duration-500"
+                >home</a
+              >
+            </li>
+            <li class="footer-items text-[13px] sm:text-base">
+              <a
+                href="./about.html"
+                class="footer-links text-white font-stolzi-regular capitalize me-0 sm:me-12.5 mb-2.5 sm:mb-0 relative after:content-[''] after:absolute after:h-px after:bg-[rgba(255,149,49,1)] after:left-0 after:bottom-0 after:w-[0%] after:transition-all after:duration-700 after:ease-linear hover:after:w-full hover:after:duration-500"
+                >about</a
+              >
+            </li>
+            <li class="footer-items text-[13px] sm:text-base">
+              <a
+                href="./shop.html"
+                class="footer-links text-white font-stolzi-regular capitalize me-0 sm:me-12.5 mb-2.5 sm:mb-0 relative after:content-[''] after:absolute after:h-px after:bg-[rgba(255,149,49,1)] after:left-0 after:bottom-0 after:w-[0%] after:transition-all after:duration-700 after:ease-linear hover:after:w-full hover:after:duration-500"
+                >shop</a
+              >
+            </li>
+            <li class="footer-items text-[13px] sm:text-base">
+              <a
+                href="./contact.html"
+                class="footer-links text-white font-stolzi-regular capitalize relative after:content-[''] after:absolute after:h-px after:bg-[rgba(255,149,49,1)] after:left-0 after:bottom-0 after:w-[0%] after:transition-all after:duration-700 after:ease-linear hover:after:w-full hover:after:duration-500"
+                >contact</a
+              >
+            </li>
+          </ul>
+          <ul
+            class="social-links flex items-center justify-center flex-col sm:flex-row"
+          >
+            <li>
+              <a href="#">
+                <svg
+                  class="drop-shadow-[0_0_8.3px_rgba(255,167,14,1)] transition-colors duration-300 hover:fill-[#1877F2]"
+                  width="16"
+                  height="28"
+                  viewBox="0 0 16 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.1667 0.5H11.1667C9.39856 0.5 7.70286 1.20238 6.45262 2.45262C5.20238 3.70286 4.5 5.39856 4.5 7.16667V11.1667H0.5V16.5H4.5V27.1667H9.83333V16.5H13.8333L15.1667 11.1667H9.83333V7.16667C9.83333 6.81304 9.97381 6.47391 10.2239 6.22386C10.4739 5.97381 10.813 5.83333 11.1667 5.83333H15.1667V0.5Z"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="mx-0 sm:mx-5 my-2.5 sm:my-0">
+              <a href="#">
+                <svg
+                  class="drop-shadow-[0_0_8.3px_rgba(255,167,14,1)] transition-colors duration-300 hover:fill-[#E4405F]"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.875 6.125H19.8875M6.75 0.5H19.25C22.7018 0.5 25.5 3.29822 25.5 6.75V19.25C25.5 22.7018 22.7018 25.5 19.25 25.5H6.75C3.29822 25.5 0.5 22.7018 0.5 19.25V6.75C0.5 3.29822 3.29822 0.5 6.75 0.5ZM18 12.2125C18.1543 13.2528 17.9766 14.3153 17.4922 15.2488C17.0078 16.1823 16.2414 16.9393 15.302 17.4121C14.3626 17.8849 13.2981 18.0495 12.2597 17.8824C11.2214 17.7153 10.2622 17.2251 9.51855 16.4815C8.7749 15.7378 8.28467 14.7786 8.11758 13.7403C7.9505 12.7019 8.11508 11.6374 8.58791 10.698C9.06073 9.75857 9.81773 8.99218 10.7512 8.5078C11.6847 8.02343 12.7472 7.84574 13.7875 8C14.8487 8.15736 15.8311 8.65183 16.5896 9.41038C17.3482 10.1689 17.8426 11.1513 18 12.2125Z"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group">
+                <svg
+                  class="drop-shadow-[0_0_8.3px_rgba(255,167,14,1)] transition-colors duration-300 hover:fill-[#CD201F]"
+                  width="28"
+                  height="20"
+                  viewBox="0 0 28 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.19858 16.5885C0.267141 12.1929 0.267141 7.65085 1.19858 3.25521C1.32096 2.80882 1.55743 2.40197 1.88472 2.07468C2.21201 1.74739 2.61886 1.51093 3.06524 1.38854C10.2165 0.20382 17.514 0.20382 24.6652 1.38854C25.1116 1.51093 25.5185 1.74739 25.8458 2.07468C26.1731 2.40197 26.4095 2.80882 26.5319 3.25521C27.4633 7.65085 27.4633 12.1929 26.5319 16.5885C26.4095 17.0349 26.1731 17.4418 25.8458 17.7691C25.5185 18.0964 25.1116 18.3328 24.6652 18.4552C17.514 19.6402 10.2165 19.6402 3.06524 18.4552C2.61886 18.3328 2.21201 18.0964 1.88472 17.7691C1.55743 17.4418 1.32096 17.0349 1.19858 16.5885Z"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    class="group-hover:fill-white"
+                    d="M11.1986 13.9219L17.8652 9.92187L11.1986 5.92187V13.9219Z"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="footer-bottom pt-10 pb-6.5 text-center text-white font-source-sance3 text-[17px] sm:text-[20px]"
+        >
+          <span class=""
+            >© 2026
+            <a href="./index.html" class="hover:text-[rgba(255,149,49,1)]"
+              >Your Brand Name.</a
+            >
+            All
+            <a href="#" class="hover:text-[rgba(255,149,49,1)]">rights</a>
+            reserved.</span
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- !footer section ends here -->
+
+    <!-- ^splide js -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="path-to-the-script/splide-extension-auto-scroll.min.js"></script>
+
+    <script src="./js/splide.js"></script>
+    <!-- ^custom js -->
+    <script src="./js/spript.js"></script>
+  </body>
+</html>
